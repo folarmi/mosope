@@ -136,7 +136,7 @@ function Navigation({ herName, isOpen, setIsOpen }: { herName: string; isOpen: b
         
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-6 text-sm font-medium text-espresso-700">
-            <a href="#shades" className="hover:text-espresso-900 transition-colors">Shades</a>
+            <a href="#shades" className="hover:text-espresso-900 transition-colors">Shades Of You</a>
             <a href="#gallery" className="hover:text-espresso-900 transition-colors">Gallery</a>
             <a href="#memories" className="hover:text-espresso-900 transition-colors">Memories</a>
         </div>

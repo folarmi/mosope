@@ -6,8 +6,9 @@ import signOut from "../../assets/signOut.jpeg";
 import feelsLikeHome from "../../assets/feelsLikeHome.jpeg"; 
 import justUs from "../../assets/justUs.jpeg"; 
 import signOutVideo from "../../assets/videos/signOut.mp4"; 
-import trainRideVideo from "../../assets/videos/trainRide.mp4"; 
 import firstMeet from "../../assets/videos/firstMeet.mp4"; 
+import yapSessions from "../../assets/videos/yapSessions.mp4"; 
+import yapThumbnail from "../../assets/videos/yapThumbnail.jpeg"; 
 import firstMeetThumbNail from "../../assets/videos/firstMeetThumbNail.jpeg"; 
 import thumbNailTwo from "../../assets/videos/thumbNailTwo.jpeg"; 
 import thumbNailThree from "../../assets/videos/thumbNailThree.jpeg"; 
@@ -17,8 +18,8 @@ type GalleryItem = {
   id: number;
   type: "image" | "video";
   caption: string;
-  src: string; // URL for image or video
-  thumbnail?: string; // Optional thumbnail for videos
+  src: string;
+  thumbnail?: string; 
   color: string;
 };
 
@@ -35,15 +36,15 @@ const GALLERY_ITEMS: GalleryItem[] = [
   { 
     id: 2, 
     type: "video", 
-    caption: "Lagos to Abeokuta — The train ride", 
-    src: trainRideVideo, 
+    caption: "Typical yap sessions 😂", 
+    src: yapSessions, 
     color: "bg-taupe-400",
-    thumbnail: thumbNailThree
+    thumbnail: yapThumbnail
   },
   { 
     id: 3, 
     type: "video", 
-    caption: "Sign-out surprise — You deserved the noise", 
+    caption: "Had to come sign you out 😎", 
     src: signOutVideo, 
     color: "bg-espresso-700",
     thumbnail: thumbNailTwo
@@ -51,21 +52,21 @@ const GALLERY_ITEMS: GalleryItem[] = [
   { 
     id: 4, 
     type: "image", 
-    caption: "A random picture that feels like home", 
+    caption: "A random picture that feels like home 🏠", 
     src: feelsLikeHome, 
     color: "bg-mauve-grey"
   },
   { 
     id: 5, 
     type: "image", 
-    caption: "Us. Just us. (1)", 
+    caption: "I am not a bully i promise 🙃", 
     src: signOut, 
     color: "bg-taupe-200"
   },
   { 
     id: 6, 
     type: "image", 
-    caption: "Us. Just us. (2)", 
+    caption: "Us. Just us. 💕", 
     src: justUs, 
     color: "bg-espresso-800"
   },
