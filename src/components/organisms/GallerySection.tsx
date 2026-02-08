@@ -11,7 +11,6 @@ import yapSessions from "../../assets/videos/yapSessions.mp4";
 import yapThumbnail from "../../assets/videos/yapThumbnail.jpeg"; 
 import firstMeetThumbNail from "../../assets/videos/firstMeetThumbNail.jpeg"; 
 import thumbNailTwo from "../../assets/videos/thumbNailTwo.jpeg"; 
-import thumbNailThree from "../../assets/videos/thumbNailThree.jpeg"; 
 
 // Define the structure for Gallery Items
 type GalleryItem = {

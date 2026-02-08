@@ -5,38 +5,14 @@ import { Menu, Gift, X } from "lucide-react";
 
 // Molecules
 import { FeatureCard } from "./components/molecules/FeatureCard";
-import { MemoryCard } from "./components/molecules/MemoryCard";
 
 // Organisms
 import { Hero } from "./components/organisms/Hero";
 import { ShadesOfYouSection } from "./components/organisms/ShadesOfYouSection";
-import { InsideJokesSection } from "./components/organisms/InsideJokesSection";
 import { SectionHeader } from "./components/molecules/SectionHeader";
 import { GallerySection } from "./components/organisms/GallerySection";
 
 
-const MEMORIES = [
-  {
-    title: "Abeokuta trip",
-    detail: "The kind of trip that wasn’t just “travel” — it was us being us, moving through the day like a small team.",
-    tag: "Abeokuta",
-  },
-  {
-    title: "Your signing out day",
-    detail: "Showing up wasn’t a question. I just knew I needed to be there — because you deserve people who celebrate you loudly.",
-    tag: "proud of you",
-  },
-  {
-    title: "Our movie moments",
-    detail: "We don’t just watch films. We react, we gist, we pause, we rewind, we quote it later like it’s scripture.",
-    tag: "cinema",
-  },
-  {
-    title: "The everyday softness",
-    detail: "Even on normal days, you make life feel less heavy — like there’s always something gentle to look forward to.",
-    tag: "real",
-  },
-];
 
 export default function App() {
   const herName = "Mosopefuoluwa";
@@ -58,7 +34,6 @@ export default function App() {
 
         <ShadesOfYouSection />
 
-        <InsideJokesSection />
 
         <section id="gallery" className="py-24">
              <GallerySection />
@@ -66,22 +41,44 @@ export default function App() {
 
         {/* Memories / About Us */}
         <section id="memories" className="py-32 px-5 bg-white/40 border-y border-white/50 backdrop-blur-sm">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start">
-                <div className="sticky top-32">
-                    <SectionHeader 
-                        title="Why We Work"
-                        subtitle="Friendship isn't just about time passed; it's about the quality of the moments. Here’s why I cherish what we have."
+            <div className="max-w-7xl mx-auto">
+                <SectionHeader 
+                    title="Why We Work"
+                    subtitle="Friendship isn't just about time passed; it's about the quality of the moments. Here’s why I cherish what we have."
+                    centered
+                />
+                
+                <div className="grid md:grid-cols-3 gap-6">
+                    <FeatureCard 
+                        title="Authenticity" 
+                        description="No masks. Just us." 
+                        delay={0.1} 
                     />
-                     <div className="grid grid-cols-2 gap-4">
-                        <FeatureCard title="Authenticity" description="No masks. Just us." delay={0.2} />
-                        <FeatureCard title="Support" description="In every season." delay={0.4} />
-                     </div>
-                </div>
-
-                <div className="space-y-6">
-                    {MEMORIES.map((m, i) => (
-                        <MemoryCard key={i} {...m} delay={i * 0.1} />
-                    ))}
+                    <FeatureCard 
+                        title="Support" 
+                        description="In every season." 
+                        delay={0.2} 
+                    />
+                    <FeatureCard 
+                        title="Growth" 
+                        description="We don't just exist; we evolve together." 
+                        delay={0.3} 
+                    />
+                     <FeatureCard 
+                        title="Vibes" 
+                        description="From deep talks to yap sessions." 
+                        delay={0.4} 
+                    />
+                    <FeatureCard 
+                        title="Safe Space" 
+                        description="A judgment-free zone, always." 
+                        delay={0.5} 
+                    />
+                    <FeatureCard 
+                        title="Consistency" 
+                        description="Showing up, even when life gets loud." 
+                        delay={0.6} 
+                    />
                 </div>
             </div>
         </section>
@@ -163,7 +160,6 @@ function Navigation({ herName, isOpen, setIsOpen }: { herName: string; isOpen: b
             >
                 <div className="flex flex-col gap-8 text-center text-2xl font-serif text-espresso-900" onClick={() => setIsOpen(false)}>
                     <a href="#shades">Shades of You</a>
-                    <a href="#jokes">Inside Jokes</a>
                     <a href="#gallery">Gallery</a>
                     <a href="#memories">Memories</a>
                     <a href="#wish">Birthday Wish</a>
