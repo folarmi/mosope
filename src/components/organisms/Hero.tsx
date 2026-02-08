@@ -64,6 +64,7 @@ export function Hero({ herName }: { herName: string }) {
                <img 
                 src={coverImage} 
                 alt={herName} 
+                loading="eager"
                 className="w-full h-full object-cover opacity-90 mix-blend-multiply"
                />
                <div className="absolute inset-0 bg-gradient-to-t from-espresso-900/40 to-transparent" />

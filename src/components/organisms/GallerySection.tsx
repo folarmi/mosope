@@ -101,6 +101,8 @@ export function GallerySection() {
                          <img 
                             src={item.type === 'video' ? (item.thumbnail || item.src) : item.src} 
                             alt={item.caption} 
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                          />
                          
