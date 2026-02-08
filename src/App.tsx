@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, Gift, X } from "lucide-react";
 
 
 // Molecules
 import { FeatureCard } from "./components/molecules/FeatureCard";
+import { Loader } from "./components/atoms/Loader";
 
 // Organisms
 import { Hero } from "./components/organisms/Hero";
@@ -18,8 +19,23 @@ export default function App() {
   const herName = "Mosopefuoluwa";
   const yourName = "Folasayo";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading time / wait for assets essentially
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // 2.5 seconds minimum for the "celebration" loader
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
+    <>
+    <AnimatePresence mode="wait">
+      {isLoading && <Loader key="loader" />}
+    </AnimatePresence>
+    
     <div id="top" className="relative min-h-screen grain selection:bg-taupe-300 selection:text-white overflow-x-hidden">
       {/* Background glow elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
@@ -118,6 +134,7 @@ export default function App() {
         </footer>
       </main>
     </div>
+    </>
   );
 }
 

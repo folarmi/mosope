@@ -28,7 +28,7 @@ export function ShadesOfYouSection() {
         centered
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8">
         {SHADES.map((shade, i) => (
           <div key={i} className="transform md:nth-child(2n):translate-y-12 transition-transform">
              <ShadeCard title={shade.title} description={shade.description} color={shade.color} delay={i * 0.1} imageSrc={shade?.imageSrc}/>
