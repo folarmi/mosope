@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, Gift, X } from "lucide-react";
@@ -11,6 +12,7 @@ import { Hero } from "./components/organisms/Hero";
 import { ShadesOfYouSection } from "./components/organisms/ShadesOfYouSection";
 import { SectionHeader } from "./components/molecules/SectionHeader";
 import { GallerySection } from "./components/organisms/GallerySection";
+import { BirthdayCake } from "./components/atoms/BirthdayCake";
 
 export default function App() {
   const herName = "Mosopefoluwa";
@@ -111,29 +113,66 @@ export default function App() {
             className="py-32 px-5 max-w-4xl mx-auto text-center relative"
           >
             <div className="relative z-10 bg-white/60 backdrop-blur-xl p-8 md:p-16 rounded-[3rem] border border-white shadow-2xl shadow-taupe-200/50">
-              <SectionHeader title={`Dear ${herName},`} subtitle="" centered />
+              <h2 className="text-2xl md:text-3xl font-serif text-espresso-900 mb-8 leading-snug">
+                Sope Mi 🩷🩷, My First Class Graduate 😌😌, My bestest friend in the entire world (UniAbuja I know 😏), My Commandant 🫡🫡🫡, Eyan mi…
+              </h2>
 
-              <div className="space-y-6 text-lg md:text-xl text-espresso-800 leading-relaxed font-light">
+              <div className="space-y-6 text-lg md:text-xl text-espresso-800 leading-relaxed font-light text-justify">
+                <p>Happy birthday, my love. 🎂🎂</p>
                 <p>
-                  I hope this year feels like <strong>ease</strong> and{" "}
-                  <strong>alignment</strong>. Like doors opening without you
-                  forcing them. Like joy that doesn’t ask you to shrink.
+                  You are a gift I never knew I needed, but somehow ended up being
+                  the one that keeps giving again and again. I admire your
+                  unbreakable spirit, your tenacity (I’m convinced your
+                  classmates peeped into your life before choosing it as a
+                  theme), your drive, your passion, and your deep love for
+                  everything nursing. (First class for a reason , No be
+                  mistake 😏).
                 </p>
                 <p>
-                  Thank you for being you — steady, kind, brilliant. Thank you
-                  for letting me be part of your life. I’m proud of you. I’m
-                  grateful for you. And I’m always in your corner.
+                  To say I am proud of you would be an understatement. I am
+                  constantly in awe of how you manage to keep everything running
+                  without ever dropping the ball. You do incredible things and
+                  somehow make them look effortless. I’m so grateful that in
+                  you, I found a best friend. Thank you for
+                  listening. For holding my hands through the crazy times. For
+                  letting me rant about the same things over and over without
+                  ever making me feel small. Thank you for being a living
+                  example of what true friendship should look like.
+                </p>
+                <p>
+                  This past year has been a lottttt. But you’re still here.
+                  Still standing. Head held high. (Wasn’t expecting anything
+                  less, by the way. ) Just in case I don’t say it enough , you
+                  are beautiful inside and out. Warm. Caring. Soft yet strong.
+                  Wholesome. Rare.
+                </p>
+                <p>
+                  I will always be rooting for you. Always in your corner.
+                  Always your number one fan and biggest supporter. And please
+                  be prepared for many more years of me stressing you (I take
+                  my job very seriously 💃💃).
+                </p>
+                <p>
+                  Have the most beautiful year ahead, my darling. I can’t wait
+                  for all the memories we’ll create together. I’m here for all
+                  of it. Every laugh. Every win. Every soft moment.
                 </p>
               </div>
 
+        <div className="mt-12 flex flex-row items-center justify-center gap-4 md:gap-12">
+                <BirthdayCake variant={2} candleCount={3} />
+                <BirthdayCake variant={3} candleCount={3} />
+              </div>
               <div className="mt-12 pt-8 border-t border-espresso-900/5">
                 <p className="font-serif italic text-2xl text-taupe-500">
-                  Happy Birthday, my girl. 🥂✨
+                  Happy birthday, My Commandant. 🫡🫡
                 </p>
                 <p className="text-sm font-bold uppercase tracking-widest text-espresso-900/40 mt-4">
                   From {yourName}
                 </p>
               </div>
+              
+      
             </div>
           </section>
 
@@ -162,7 +201,7 @@ function Navigation({
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-6 flex justify-center pointer-events-none">
-        <div className="bg-white/80 backdrop-blur-md rounded-full px-6 py-3 border border-white/50 shadow-soft pointer-events-auto flex items-center gap-8 justify-between min-w-[300px] md:min-w-fit">
+        <div className="bg-white/80 backdrop-blur-md rounded-full px-6 py-3 border border-white/50 shadow-soft pointer-events-auto flex items-center gap-8 justify-between min-w-75 md:min-w-fit">
           <a
             href="#top"
             className="text-espresso-900 font-bold text-lg tracking-tight hover:text-taupe-400 transition-colors"
@@ -188,7 +227,7 @@ function Navigation({
               href="#memories"
               className="hover:text-espresso-900 transition-colors"
             >
-              Memories
+              Why we work
             </a>
           </div>
 

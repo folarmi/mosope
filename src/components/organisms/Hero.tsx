@@ -25,7 +25,9 @@ export function Hero({ herName }: { herName: string }) {
             className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight text-espresso-900 leading-[0.9] -ml-1"
           >
             The Art of <br />
-            <span className="text-taupe-400 italic font-serif pr-2">Being You.</span>
+            <span className="text-taupe-400 italic font-serif pr-2">
+              Being You.
+            </span>
           </motion.h1>
 
           <motion.p
@@ -58,16 +60,16 @@ export function Hero({ herName }: { herName: string }) {
             initial={{ opacity: 0, scale: 0.9, rotate: 6 }}
             animate={{ opacity: 1, scale: 1, rotate: 2 }}
             transition={{ duration: 1.2, delay: 0.2, type: "spring" }}
-            className="aspect-[4/5] rounded-[2.5rem] overflow-hidden relative shadow-2xl shadow-espresso-900/10 hover:rotate-0 transition-transform duration-700"
+            className="aspect-4/5 rounded-[2.5rem] overflow-hidden relative shadow-2xl shadow-espresso-900/10 hover:rotate-0 transition-transform duration-700"
           >
             <div className="absolute inset-0 bg-taupe-200">
-               <img 
-                src={coverImage} 
-                alt={herName} 
+              <img
+                src={coverImage}
+                alt={herName}
                 loading="eager"
                 className="w-full h-full object-cover opacity-90 mix-blend-multiply"
-               />
-               <div className="absolute inset-0 bg-gradient-to-t from-espresso-900/40 to-transparent" />
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-espresso-900/40 to-transparent" />
             </div>
 
             {/* Floating Card */}
@@ -80,7 +82,7 @@ export function Hero({ herName }: { herName: string }) {
                   <p className="font-medium text-lg">Soft Life & Success</p>
                 </div>
                 <div className="p-2 bg-white/20 rounded-full">
-                    <Heart className="text-nude-50 fill-nude-50" size={20} />
+                  <Heart className="text-nude-50 fill-nude-50" size={20} />
                 </div>
               </div>
             </div>
@@ -94,7 +96,9 @@ export function Hero({ herName }: { herName: string }) {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-espresso-900/20"
       >
-        <span className="text-[10px] uppercase tracking-widest font-bold">Scroll</span>
+        <span className="text-[10px] uppercase tracking-widest font-bold">
+          Scroll
+        </span>
         <ArrowDown size={14} className="animate-bounce" />
       </motion.div>
     </section>
